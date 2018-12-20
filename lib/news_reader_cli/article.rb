@@ -28,6 +28,7 @@ class NewsReaderCli::Article
   def self.find_content_by_article_index(list_number)
     self.all.find.with_index(1) do |article, index|
       index == list_number
+      #binding.pry
     end.content
   end
 
