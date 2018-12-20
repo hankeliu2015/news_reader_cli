@@ -17,14 +17,10 @@ class NewsReaderCli::Article
     @@all
   end
 
-  #list all the titles (in alphabat )
+  #list all the articlels titles (in alphabat )
   def self.list_all_titles
-
     self.all.each.with_index(1) do |article, index|
-      # article.title
-      # index
       puts "#{index}. #{article.title}"
-      #binding.pry
     end
   end
 
