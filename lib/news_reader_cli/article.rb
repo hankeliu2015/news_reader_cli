@@ -24,4 +24,11 @@ class NewsReaderCli::Article
     end
   end
 
+  # pick an article to show the content
+  def self.find_content_by_article_index(list_number)
+    self.all.find.with_index(1) do |article, index|
+      index == list_number
+    end.content
+  end
+
 end #end of class
