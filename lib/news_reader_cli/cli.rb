@@ -2,8 +2,16 @@
 class NewsReaderCli::CLI
 
 
-  def call
-    puts "cli.rb call is working too"
+  def start
+    puts "Welcome to the News Read CLI!!!"
+    menu
+    NewsReaderCli::ApiService.newsapi
+  end
+
+  def menu
+    puts "Here are today's news headlines"
+
+
   end
 
 end
