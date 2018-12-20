@@ -1,11 +1,7 @@
 #!/usr/bin/env ruby
 require_relative "../lib/news_reader_cli"
 
-#puts "news_reader_cli is working"
-#NewsReaderCli::CLI.new.call
 NewsReaderCli::CLI.new.start
-#a1 = articles.first
 
-#NewsReaderCli::Article.new(a1)
-binding.pry
-puts "end of command line"
+# binding.pry
+# puts "end of line"

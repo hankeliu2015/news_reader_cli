@@ -1,16 +1,15 @@
 #puts "cli is also working"
 class NewsReaderCli::CLI
 
-
   def start
-    puts "Welcome to the News Read CLI!!!"
-    menu
     NewsReaderCli::ApiService.newsapi
+    puts "Welcome to the News Reader CLI!!!"
+    menu
   end
 
   def menu
     puts "Here are today's news headlines"
-
+    NewsReaderCli::Article.list_all_titles
   end
 
 end

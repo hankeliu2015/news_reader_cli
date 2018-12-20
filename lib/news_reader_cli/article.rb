@@ -16,5 +16,16 @@ class NewsReaderCli::Article
   def self.all
     @@all
   end
-    #binding.pry
-end
+
+  #list all the titles (in alphabat )
+  def self.list_all_titles
+
+    self.all.each.with_index(1) do |article, index|
+      # article.title
+      # index
+      puts "#{index}. #{article.title}"
+      #binding.pry
+    end
+  end
+
+end #end of class
