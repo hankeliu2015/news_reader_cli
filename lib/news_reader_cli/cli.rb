@@ -11,7 +11,6 @@ class NewsReaderCli::CLI
   def menu
     puts "Here are today's news headlines"
 
-
   end
 
 end
