@@ -3,7 +3,9 @@ require_relative "../lib/news_reader_cli"
 
 #puts "news_reader_cli is working"
 #NewsReaderCli::CLI.new.call
-articles = NewsReaderCli::ApiService.newsapi
-a1 = articles.first
+NewsReaderCli::ApiService.newsapi
+#a1 = articles.first
+
+#NewsReaderCli::Article.new(a1)
 binding.pry
-NewsReaderCli::Article.new(a1)
+puts "end of command line"

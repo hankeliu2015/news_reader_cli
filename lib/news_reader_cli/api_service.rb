@@ -9,8 +9,13 @@ class NewsReaderCli::ApiService
     req = open(url)
     response_body = req.read
     json = JSON.parse(response_body)
-    json["articles"]
+
+    json["articles"].each do |article|
+      NewsReaderCli::Article.new(article)
+    end
     #binding.pry
+
   end
+
 
 end
