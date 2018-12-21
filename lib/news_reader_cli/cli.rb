@@ -1,4 +1,4 @@
-#puts "cli is also working"
+
 class NewsReaderCli::CLI
 
   def start
@@ -18,8 +18,12 @@ class NewsReaderCli::CLI
       input = gets.chomp.strip
 
       if (1..(NewsReaderCli::Article.all.length)).include?(input.to_i)
-        found_content = NewsReaderCli::Article.find_content_by_article_index(input.to_i)
-        puts "#{found_content}"
+
+        found_url = NewsReaderCli::Article.find_url_by_article_index(input.to_i)
+        puts "#{found_url}"
+
+        # found_content = NewsReaderCli::Article.find_content_by_article_index(input.to_i)
+        # puts "#{found_content}"
       else
         puts "It is not a valid input article number, please re-type the number match artiles."
       end
