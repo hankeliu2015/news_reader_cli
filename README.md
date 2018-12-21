@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type the below command and follow screen prompts
+$ news_reader_cli
 
 ## Development
 
