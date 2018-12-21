@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/news_reader_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-This Ruby Gem provide a CLI to view 36 top news headlines and contents from a variaty of top major publishers in the US.
+This Ruby Gem provides a CLI to view 36 top news headlines and contents from a variaty of top US major publishers.
 
 ## Installation
 
