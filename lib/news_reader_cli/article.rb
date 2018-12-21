@@ -36,7 +36,6 @@ class NewsReaderCli::Article
   def self.find_url_by_article_index(list_number)
     self.all.find.with_index(1) do |article, index|
       index == list_number
-      #binding.pry
     end.url
   end
 

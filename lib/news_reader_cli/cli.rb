@@ -22,12 +22,12 @@ class NewsReaderCli::CLI
       if input == "l"
         NewsReaderCli::Article.list_all_titles
         #binding.pry
-      elsif input.slice(0) == "a" && (1..(NewsReaderCli::Article.all.length)).include?(input.slice(0).to_i)
-        found_content = NewsReaderCli::Article.find_content_by_article_index(input.to_i)
+      elsif input.slice(0) == "a" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[a]/, '').to_i)
+        found_content = NewsReaderCli::Article.find_content_by_article_index(input.gsub(/[a]/, '').to_i)
         puts "#{found_content}"
         #binding.pry
-      elsif input.slice(0) == "u" && (1..(NewsReaderCli::Article.all.length)).include?(input.slice(0).to_i)
-        found_url = NewsReaderCli::Article.find_url_by_article_index(input.slice(0).to_i)
+      elsif input.slice(0) == "u" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[u]/, '').to_i)
+        found_url = NewsReaderCli::Article.find_url_by_article_index(input.gsub(/[u]/, '').to_i)
         puts "#{found_url}"
         # binding.pry
         # puts "0"
