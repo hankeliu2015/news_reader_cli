@@ -5,6 +5,7 @@ class NewsReaderCli::CLI
     NewsReaderCli::ApiService.newsapi
     puts "Welcome to the News Reader CLI!!!"
     menu
+    goodbye
   end
 
   def menu
@@ -35,13 +36,19 @@ class NewsReaderCli::CLI
         # puts "0"
       else
         puts "Please enter a valid input article number, please follow instructions."
-        puts "Please type 'l' today's news headlines."
-        puts "To read an article, please type 'a' follow by index number."
-        puts "To get an article url, please type 'u' follow by index number."
-        puts "To Exit, type 'exit'."
-
       end
+    puts <<-HEREDOC
+    
+      1. Please type 'l' for a list of today's news headlines.
+      2. To read an article, please type 'a' follow by index number.
+      3. To get an article url, please type 'u' follow by index number.
+      4. To Exit, type 'exit'.
+      HEREDOC
     end
+  end
+
+  def goodbye
+    puts "Goodbye! We will have more news for you tomorrow."
   end
 end #end of class
 
