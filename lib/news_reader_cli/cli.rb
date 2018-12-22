@@ -8,11 +8,13 @@ class NewsReaderCli::CLI
   end
 
   def menu
-
-    puts "Please type 'l' today's news headlines."
-    puts "To read an article, please type 'a' follow by index number."
-    puts "To get an article url, please type 'u' follow by index number."
-    puts "To Exit, type 'exit'."
+    # here doc
+    puts <<-HEREDOC
+      1. Please type 'l' for a list of today's news headlines.
+      2. To read an article, please type 'a' follow by index number.
+      3. To get an article url, please type 'u' follow by index number.
+      4. To Exit, type 'exit'.
+      HEREDOC
 
     input = ""
 
