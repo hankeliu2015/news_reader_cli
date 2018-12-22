@@ -35,10 +35,10 @@ class NewsReaderCli::CLI
         # binding.pry
         # puts "0"
       else
-        puts "Please enter a valid input article number, please follow instructions."
+        puts "Sorry! input is not valid. Please follow instructions."
       end
     puts <<-HEREDOC
-    
+
       1. Please type 'l' for a list of today's news headlines.
       2. To read an article, please type 'a' follow by index number.
       3. To get an article url, please type 'u' follow by index number.
