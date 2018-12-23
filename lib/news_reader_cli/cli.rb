@@ -2,12 +2,12 @@
 class NewsReaderCli::CLI
 
   def start
+
     NewsReaderCli::ApiService.newsapi
     puts "Welcome to the News Reader CLI!!!"
-    binding.pry
     menu
-
     goodbye
+    
   end
 
   def menu
