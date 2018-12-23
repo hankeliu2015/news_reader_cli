@@ -1,4 +1,4 @@
-gem 'dotenv-rails', groups: [:development, :test]
+# gem 'dotenv-rails', groups: [:development, :test] # not able to load dotenv
 
 source "https://rubygems.org"
 
