@@ -1,6 +1,6 @@
 class NewsReaderCli::Article
 
-  attr_accessor :source, :author, :title, :description, :url, :urltoimage, :publishedat, :content
+  attr_accessor :source, :author, :title, :description, :url, :urltoimage, :publishedAt, :content
 
   @@all = []
 
@@ -38,5 +38,19 @@ class NewsReaderCli::Article
       index == list_number
     end.url
   end
+
+  def self.find_source_name_by_article_index(list_number)
+    self.all.find.with_index(1) do |article, index|
+      index == list_number
+    end.source["name"]
+    #binding.pry
+  end
+
+  def self.find_pub_date_by_article_index(list_number)
+    self.all.find.with_index(1) do |article, index|
+       index == list_number
+    end.publishedAt
+  end
+
 
 end #end of class
