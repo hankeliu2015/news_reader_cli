@@ -39,8 +39,9 @@ class NewsReaderCli::CLI
 
       elsif input.slice(0) == "u" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[u]/, '').to_i)
         found_url = NewsReaderCli::Article.find_url_by_article_index(input.gsub(/[u]/, '').to_i)
+
+        puts "Please check your browser, your article is opening now."
         system("open", "#{found_url}")
-        # puts "#{found_url}"
 
       elsif input == "exit"
         #not output here. need to end the inner loop.
