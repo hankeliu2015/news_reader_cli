@@ -11,13 +11,8 @@ class NewsReaderCli::CLI
   end
 
   def menu
-    # here doc
-    puts <<-HEREDOC
-      1. Please type 'list' for a list of today's news headlines.
-      2. To read an article, please type 'a' follow by index number.
-      3. To get an article url, please type 'u' follow by index number.
-      4. To Exit, type 'exit'.
-      HEREDOC
+
+    help_menu
 
     input = ""
 
@@ -48,19 +43,32 @@ class NewsReaderCli::CLI
       else
         puts "Sorry! input is not valid. Please follow instructions."
       end
-    puts <<-HEREDOC
 
-      1. Please type 'list' for a list of today's news headlines.
-      2. To read an article, please type 'a' follow by index number.
-      3. To open an article url, please type 'u' follow by index number.
-      4. To Exit, type 'exit'.
-      HEREDOC
+      self.help_menu
+
+    # puts <<-HEREDOC
+    #
+    #   1. Please type 'list' for a list of today's news headlines.
+    #   2. To read an article, please type 'a' follow by index number.
+    #   3. To open an article url, please type 'u' follow by index number.
+    #   4. To Exit, type 'exit'.
+    #   HEREDOC
     end
   end
 
   def goodbye
     puts "Goodbye! We will have more news for you tomorrow."
   end
+
+  def help_menu
+    puts <<-HEREDOC
+      1. Please type 'list' for a list of today's news headlines.
+      2. To read an article, please type 'a' follow by index number.
+      3. To get an article url, please type 'u' follow by index number.
+      4. To Exit, type 'exit'.
+      HEREDOC
+  end
+
 end #end of class
 
         # input2 = ""
