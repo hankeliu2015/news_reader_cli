@@ -24,33 +24,39 @@ class NewsReaderCli::Article
     end
   end
 
-  # pick an article to show the content
-  def self.find_content_by_article_index(list_number)
+  #find the article instance by article index number
+  def self.find_article_by_article_index(number)
     self.all.find.with_index(1) do |article, index|
-      index == list_number
-      #binding.pry
-    end.content
+      index == number
+    end
   end
 
+  # pick an article to show the content
+  # def self.find_content_by_article_index(number)
+  #   self.all.find.with_index(1) do |article, index|
+  #     index == number
+  #     #binding.pry
+  #   end.content
+  # end
+
   # find an article's URL
-  def self.find_url_by_article_index(list_number)
+  def self.find_url_by_article_index(number)
     self.all.find.with_index(1) do |article, index|
-      index == list_number
+      index == number
     end.url
   end
 
-  def self.find_source_name_by_article_index(list_number)
-    self.all.find.with_index(1) do |article, index|
-      index == list_number
-    end.source["name"]
-    #binding.pry
-  end
+  # def self.find_source_name_by_article_index(number)
+  #   self.all.find.with_index(1) do |article, index|
+  #     index == number
+  #   end.source["name"]
+  # end
 
-  def self.find_pub_date_by_article_index(list_number)
-    self.all.find.with_index(1) do |article, index|
-       index == list_number
-    end.publishedAt
-  end
+  # def self.find_pub_date_by_article_index(number)
+  #   self.all.find.with_index(1) do |article, index|
+  #      index == number
+  #   end.publishedAt
+  # end
 
 
 end #end of class

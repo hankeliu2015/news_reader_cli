@@ -4,7 +4,9 @@ class NewsReaderCli::CLI
   def start
     NewsReaderCli::ApiService.newsapi
     puts "Welcome to the News Reader CLI!!!"
+    #binding.pry
     menu
+
     goodbye
   end
 
@@ -22,24 +24,27 @@ class NewsReaderCli::CLI
     while input != "exit" do
       input = gets.chomp.strip
 
-      if input == "l"
+      if input == "list"
         NewsReaderCli::Article.list_all_titles
-        #binding.pry
+
       elsif input.slice(0) == "a" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[a]/, '').to_i)
-        found_content = NewsReaderCli::Article.find_content_by_article_index(input.gsub(/[a]/, '').to_i)
-        puts "#{found_content}"
-        #binding.pry
+        found_article_instance = NewsReaderCli::Article.find_article_by_article_index(input.gsub(/[a]/, '').to_i)
+        puts "Article #{input.gsub(/[a]/, "")}:"
+        puts "#{found_article_instance.content}"
+        puts "---------"
+        puts "Published Date: #{found_article_instance.publishedAt}"
+        puts "Publisher: #{found_article_instance.source["name"]}"
+
       elsif input.slice(0) == "u" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[u]/, '').to_i)
         found_url = NewsReaderCli::Article.find_url_by_article_index(input.gsub(/[u]/, '').to_i)
         puts "#{found_url}"
-        # binding.pry
-        # puts "0"
+
       else
         puts "Sorry! input is not valid. Please follow instructions."
       end
     puts <<-HEREDOC
 
-      1. Please type 'l' for a list of today's news headlines.
+      1. Please type 'list' for a list of today's news headlines.
       2. To read an article, please type 'a' follow by index number.
       3. To get an article url, please type 'u' follow by index number.
       4. To Exit, type 'exit'.
