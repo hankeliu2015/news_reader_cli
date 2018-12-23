@@ -35,10 +35,12 @@ class NewsReaderCli::CLI
         puts "---------"
         puts "Published Date: #{found_article_instance.publishedAt}"
         puts "Publisher: #{found_article_instance.source["name"]}"
+        puts "Article URL: #{found_article_instance.url}"
 
       elsif input.slice(0) == "u" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[u]/, '').to_i)
         found_url = NewsReaderCli::Article.find_url_by_article_index(input.gsub(/[u]/, '').to_i)
-        puts "#{found_url}"
+        system("open", "#{found_url}")
+        # puts "#{found_url}"
 
       elsif input == "exit"
         #not output here. need to end the inner loop.
@@ -49,7 +51,7 @@ class NewsReaderCli::CLI
 
       1. Please type 'list' for a list of today's news headlines.
       2. To read an article, please type 'a' follow by index number.
-      3. To get an article url, please type 'u' follow by index number.
+      3. To open an article url, please type 'u' follow by index number.
       4. To Exit, type 'exit'.
       HEREDOC
     end
