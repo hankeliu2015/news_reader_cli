@@ -13,7 +13,7 @@ class NewsReaderCli::CLI
   def menu
     # here doc
     puts <<-HEREDOC
-      1. Please type 'l' for a list of today's news headlines.
+      1. Please type 'list' for a list of today's news headlines.
       2. To read an article, please type 'a' follow by index number.
       3. To get an article url, please type 'u' follow by index number.
       4. To Exit, type 'exit'.
@@ -30,6 +30,7 @@ class NewsReaderCli::CLI
       elsif input.slice(0) == "a" && (1..(NewsReaderCli::Article.all.length)).include?(input.gsub(/[a]/, '').to_i)
         found_article_instance = NewsReaderCli::Article.find_article_by_article_index(input.gsub(/[a]/, '').to_i)
         puts "Article #{input.gsub(/[a]/, "")}:"
+        puts "---------"
         puts "#{found_article_instance.content}"
         puts "---------"
         puts "Published Date: #{found_article_instance.publishedAt}"
@@ -40,7 +41,7 @@ class NewsReaderCli::CLI
         puts "#{found_url}"
 
       elsif input == "exit"
-        #not output here. need to end the inner loop. 
+        #not output here. need to end the inner loop.
       else
         puts "Sorry! input is not valid. Please follow instructions."
       end
