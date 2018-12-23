@@ -39,6 +39,8 @@ class NewsReaderCli::CLI
         found_url = NewsReaderCli::Article.find_url_by_article_index(input.gsub(/[u]/, '').to_i)
         puts "#{found_url}"
 
+      elsif input == "exit"
+        #not output here. need to end the inner loop. 
       else
         puts "Sorry! input is not valid. Please follow instructions."
       end
