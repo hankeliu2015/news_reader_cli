@@ -7,7 +7,7 @@ class NewsReaderCli::CLI
     puts "Welcome to the News Reader CLI!!!"
     menu
     goodbye
-    
+
   end
 
   def menu
@@ -26,6 +26,7 @@ class NewsReaderCli::CLI
         found_article_instance = NewsReaderCli::Article.find_article_by_article_index(input.gsub(/[a]/, '').to_i)
         puts "Article #{input.gsub(/[a]/, "")}:"
         puts "---------"
+        #binding.pry
         puts "#{found_article_instance.content}"
         puts "---------"
         puts "Published Date: #{found_article_instance.publishedAt}"
