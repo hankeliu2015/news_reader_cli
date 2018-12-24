@@ -4,6 +4,10 @@ require_relative "../lib/news_reader_cli"
 # myapikey = open(File.expand_path(".newsapi.rb", "~/Development/m1/news_reader_cli")).read.strip
 # binding.pry
 
-Dotenv.load('file1.env')
+Dotenv.load('.env')
+
+# need to verify if the file exist. if not create one.
+# if file1 exists, need user's input for the key. Save the key for next time.
+# if file1 not exists, create one and ask user's input and save it.
 
 NewsReaderCli::CLI.new.start
