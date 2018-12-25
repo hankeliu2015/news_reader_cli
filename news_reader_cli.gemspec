@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = [" Henry"]
   spec.email         = ["hanke.liu@gmail.com"]
 
-  spec.summary       = %q{CLI for displaying news articles from avariaty of publishers of the day (as of 2018)}
-  spec.description   = %q{Parse API from News API for viewing 36 news articles of the day and details about each}
+  spec.summary       = %q{CLI for displaying news headlines of the day (as of 2018)}
+  spec.description   = %q{Parse API from News API for viewing 36 top US breaking news from a variety of publishers }
   spec.homepage      = "https://github.com/hankeliu2015/news_reader_cli"
   spec.license       = "MIT"
 
