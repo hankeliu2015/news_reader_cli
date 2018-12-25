@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/news_reader_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-This Ruby Gem provides a CLI to view 36 top news headlines and contents from a variaty of top US major publishers.
+This Ruby Gem provides a CLI to view 36 live breaking headlines and contents from a variety of top US major publishers.
 
 ## Installation
 
@@ -27,7 +27,7 @@ Before launch the command line, Go to https://newsapi.org/docs/get-started to re
 Type the below command and follow screen prompts
 $ news_reader_cli
 
-After message "please type in API Key from API News:" paste your API key received from API News. It is a hex string with 32 characters. The key will be saved on current computer, you won't be asked again for future logon. 
+After message "please type in API Key from API News:" paste your API key received from API News. It is a hex string with 32 characters. The key will be saved on current computer, you won't be asked again for future logon.
 
 Follow screen instructions to access News articles. Type Exit to end the program.
 
