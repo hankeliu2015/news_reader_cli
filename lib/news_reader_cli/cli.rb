@@ -65,7 +65,7 @@ class NewsReaderCli::CLI
     puts <<-HEREDOC
       1. Please type 'list' for a list of today's news headlines.
       2. To read an article, please type 'a' follow by index number.
-      3. To get an article url, please type 'u' follow by index number.
+      3. To open an article's url from publisher's website, please type 'u' follow by index number.
       4. To Exit, type 'exit'.
       HEREDOC
   end
