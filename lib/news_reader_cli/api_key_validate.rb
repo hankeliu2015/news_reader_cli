@@ -21,7 +21,6 @@ class NewsReaderCli::ApiKeyValidate
 
         Your API keys value shows invalid.
         Please check verify your API Key and type in again.
-        To exit, type in "exit"
 
         HEREDOC
 

@@ -6,7 +6,7 @@ require "news_reader_cli/version"
 Gem::Specification.new do |spec|
   spec.name          = "news_reader_cli"
   spec.version       = NewsReaderCli::VERSION
-  spec.authors       = [" Henry"]
+  spec.authors       = ["Henry"]
   spec.email         = ["hanke.liu@gmail.com"]
 
   spec.summary       = %q{CLI for displaying news headlines of the day (as of 2018)}
@@ -36,6 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry"
   spec.add_development_dependency "gem-release"
+  spec.add_runtime_dependency "dotenv"
   #spec.add_development_dependency "open-uri"
   #spec.add_development_dependency "nokogiri" # won't need it for now.
 end
