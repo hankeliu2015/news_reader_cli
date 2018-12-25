@@ -8,5 +8,5 @@ NewsReaderCli::ApiKeyValidate.new.key_validate
 
 # binding.pry
 
-Dotenv.load('.env')
+Dotenv.load # defaul will looking for ('.env') 
 NewsReaderCli::CLI.new.start
