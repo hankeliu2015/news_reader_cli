@@ -22,8 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
+Before launch the command line, Go to https://newsapi.org/docs/get-started to register your account and request API key.
+
 Type the below command and follow screen prompts
 $ news_reader_cli
+
+After message "please type in API Key from API News:" paste your API key received from API News. It is a hex string with 32 characters. The key will be saved on current computer, you won't be asked again for future logon. 
+
+Follow screen instructions to access News articles. Type Exit to end the program.
 
 ## Development
 
