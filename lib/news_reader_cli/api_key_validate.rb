@@ -7,7 +7,16 @@ class NewsReaderCli::ApiKeyValidate
     if !File.exist?(".env")
       key_file = File.new(".env", "w+")
       puts "please type in API Key from API News:"
+
+      # a condition verify key value is key_validate
+
       key = gets.chomp.strip
+
+      while !key.match(/([0-9]|\w){32}/) do
+        puts "Your API keys value shows invalid. Please check verify your API Key and type in again: "
+        key = gets.chomp.strip
+      end
+
       key_file.puts("key = #{key}")
       key_file.close
 
