@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    news_reader_cli (0.1.0)
+    news_reader_cli (0.1.1)
       dotenv
 
 GEM
