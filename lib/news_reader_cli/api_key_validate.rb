@@ -8,12 +8,20 @@ class NewsReaderCli::ApiKeyValidate
       key_file = File.new(".env", "w+")
       puts "please type in API Key from API News:"
 
-      # a condition verify key value is key_validate
+      # a condition verify key value is AES 128 Hex string 32 chars
 
       key = gets.chomp.strip
 
-      while !key.match(/([0-9]|\w){32}/) do
-        puts "Your API keys value shows invalid. Please check verify your API Key and type in again: "
+      while !key.match(/([0-9]|\w){32}/) || !key = "exit" do
+
+        puts <<-HEREDOC
+
+        Your API keys value shows invalid.
+        Please check verify your API Key and type in again.
+        To exit, type in "exit"
+
+        HEREDOC
+
         key = gets.chomp.strip
       end
 
