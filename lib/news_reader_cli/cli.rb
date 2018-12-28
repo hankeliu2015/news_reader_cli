@@ -3,6 +3,7 @@ class NewsReaderCli::CLI
 
   def start
 
+    NewsReaderCli::ApiKeyValidate.new.key_validate
     Dotenv.load
     NewsReaderCli::ApiService.newsapi
     puts "Welcome to the News Reader CLI!!!"
