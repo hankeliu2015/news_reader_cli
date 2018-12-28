@@ -27,7 +27,7 @@ Before launch the command line, Go to https://newsapi.org/docs/get-started to re
 Type the below command and follow screen prompts
 $ news_reader_cli
 
-After message "please type in API Key from API News:" paste your API key received from API News. It is a hex string with 32 characters. The key will be saved on current computer, you won't be asked again for future logon.
+After message "please type in API Key from API News:" paste your API key received from API News. It is a hex string with 32 characters. The key will be saved on current directory, you won't be asked again when you launch it as the same directory.
 
 Follow screen instructions to access News articles. Type Exit to end the program.
 
