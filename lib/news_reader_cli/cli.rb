@@ -3,6 +3,7 @@ class NewsReaderCli::CLI
 
   def start
 
+    Dotenv.load
     NewsReaderCli::ApiService.newsapi
     puts "Welcome to the News Reader CLI!!!"
     menu

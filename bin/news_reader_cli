@@ -7,6 +7,5 @@ require_relative "../lib/news_reader_cli"
 NewsReaderCli::ApiKeyValidate.new.key_validate
 
 # binding.pry
-
-Dotenv.load # defaul will looking for ('.env') 
+# Dotenv.load # defaul will looking for ('.env')
 NewsReaderCli::CLI.new.start
