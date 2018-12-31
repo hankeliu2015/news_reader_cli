@@ -3,20 +3,26 @@ class NewsReaderCli::CLI
 
   def start
 
-    NewsReaderCli::ApiKeyValidate.new.key_validate
-    Dotenv.load
 
-    # assigned_api_key = ENV['key'].strip
-    #
-    # if assigned_api_key == 'exit'
-    #   puts "Goodbye"
-    #   return
-    # end
+    key_instance = NewsReaderCli::ApiKeyInputValidate.new
+    key_instance.key_input_validate
 
-    NewsReaderCli::ApiService.newsapi
-    puts "Welcome to the News Reader CLI!!!"
-    menu
-    goodbye
+    binding.pry
+
+      NewsReaderCli::ApiKeyValidate.new.key_validate
+      Dotenv.load
+
+      # assigned_api_key = ENV['key'].strip
+      #
+      # if assigned_api_key == 'exit'
+      #   puts "Goodbye"
+      #   return
+      # end
+
+      NewsReaderCli::ApiService.newsapi
+      puts "Welcome to the News Reader CLI!!!"
+      menu
+      goodbye
 
   end
 
