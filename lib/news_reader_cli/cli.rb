@@ -5,12 +5,13 @@ class NewsReaderCli::CLI
 
     NewsReaderCli::ApiKeyValidate.new.key_validate
     Dotenv.load
-    assigned_api_key = ENV['key'].strip
 
-    if assigned_api_key == 'exit'
-      puts "Goodbye"
-      return
-    end
+    # assigned_api_key = ENV['key'].strip
+    #
+    # if assigned_api_key == 'exit'
+    #   puts "Goodbye"
+    #   return
+    # end
 
     NewsReaderCli::ApiService.newsapi
     puts "Welcome to the News Reader CLI!!!"
