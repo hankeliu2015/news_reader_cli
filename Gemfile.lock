@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    news_reader_cli (0.1.1)
+    news_reader_cli (0.1.2)
       dotenv
 
 GEM
@@ -27,4 +27,4 @@ DEPENDENCIES
   rake (~> 10.0)
 
 BUNDLED WITH
-   1.16.5
+   1.17.3
