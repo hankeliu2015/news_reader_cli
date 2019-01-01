@@ -11,22 +11,24 @@ class NewsReaderCli::ApiKeyValidate
       # a condition verify key value is AES 128 Hex string 32 chars
 
       key = gets.chomp.strip
+      #
+      # while !key.match(/([0-9]|\w){32}/)  do
+      #
+      #   break if key == "exit"
+      #   # need to get out of the loop and remove the file .env
+      #
+      #   puts <<-HEREDOC
+      #
+      #   Your API keys value shows invalid.
+      #   Please check verify your API Key and type in again.
+      #
+      #   HEREDOC
+      #
+      #   key = gets.chomp.strip
+      # end
 
-      while !key.match(/([0-9]|\w){32}/)  do
 
-        break if key == "exit"
-        # need to get out of the loop and remove the file .env
-
-        puts <<-HEREDOC
-
-        Your API keys value shows invalid.
-        Please check verify your API Key and type in again.
-
-        HEREDOC
-
-        key = gets.chomp.strip
-      end
-
+      #key = key_instance.validated_key
       key_file.puts("key = #{key}")
       key_file.close
 

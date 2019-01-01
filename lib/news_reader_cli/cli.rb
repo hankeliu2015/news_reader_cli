@@ -4,25 +4,41 @@ class NewsReaderCli::CLI
   def start
 
 
-    key_instance = NewsReaderCli::ApiKeyInputValidate.new
-    key_instance.key_input_validate
+    # key_instance = NewsReaderCli::ApiKeyInputValidate.new
+    # key_instance.key_input_validate
 
-    binding.pry
+    NewsReaderCli::ApiKeyValidate.new.key_validate
+    Dotenv.load
+    #
+    # if !File.exist?(".env")
+      # key_file = File.new(".env", "w+")
+      # key = key_instance.validated_key
+      # key_file.puts("key = #{key}")
+      # key_file.close
 
-      NewsReaderCli::ApiKeyValidate.new.key_validate
-      Dotenv.load
+    # end
 
-      # assigned_api_key = ENV['key'].strip
-      #
-      # if assigned_api_key == 'exit'
-      #   puts "Goodbye"
-      #   return
-      # end
+    #compare input key with env variable
+    #if they are equal, keep going. if not change the value.
 
-      NewsReaderCli::ApiService.newsapi
-      puts "Welcome to the News Reader CLI!!!"
-      menu
-      goodbye
+    # if key_instance.validated_key != ENV['key']#.strip
+    #   key = key_instance.validated_key
+    #   key_file.puts("key = #{key}")
+    #   key_file.close
+    #
+    # end
+
+    # assigned_api_key = ENV['key'].strip
+    #
+    # if assigned_api_key == 'exit'
+    #   puts "Goodbye"
+    #   return
+    # end
+
+    NewsReaderCli::ApiService.newsapi
+    puts "Welcome to the News Reader CLI!!!"
+    menu
+    goodbye
 
   end
 
