@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/news_reader_cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-This Ruby Gem provides a CLI to view 36 live breaking headlines and contents from a variety of top US major publishers.
+This Ruby Gem provides a command Line interface to view live breaking headlines and contents from a variety of top US major publishers.
 
 ## Installation
 
@@ -39,7 +39,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/news_reader_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/hankeliu2015/news_reader_cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -47,4 +47,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the NewsReaderCli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/news_reader_cli/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the NewsReaderCli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/hankeliu2015/news_reader_cli/blob/master/CODE_OF_CONDUCT.md).
