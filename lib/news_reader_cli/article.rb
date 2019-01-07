@@ -25,12 +25,9 @@ class NewsReaderCli::Article
   def self.find_article_by_article_index(number)
     self.all[number - 1]
 
-    # find.with_index(1) do |article, index| no need to do iteration
-    #   index == number
-    # end
   end
 
-  # find an article's URL
+  # find an article's URL by using iterations
   def self.find_url_by_article_index(number)
     self.all.find.with_index(1) do |article, index|
       index == number

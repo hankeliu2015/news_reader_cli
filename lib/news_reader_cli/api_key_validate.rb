@@ -22,18 +22,3 @@ class NewsReaderCli::ApiKeyValidate
     end
   end
 end
-
-      # while !key.match(/([0-9]|\w){32}/)  do
-      #
-      #   break if key == "exit"
-      #   # need to get out of the loop and remove the file .env
-      #
-      #   puts <<-HEREDOC
-      #
-      #   Your API keys value shows invalid.
-      #   Please check verify your API Key and type in again.
-      #
-      #   HEREDOC
-      #
-      #   key = gets.chomp.strip
-      # end
