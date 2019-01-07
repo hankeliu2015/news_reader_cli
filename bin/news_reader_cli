@@ -1,11 +1,4 @@
-#!/usr/bin/env ruby
+#!/ usr/bin/env ruby
 require_relative "../lib/news_reader_cli"
-
-# myapikey = open(File.expand_path(".newsapi.rb", "~/Development/m1/news_reader_cli")).read.strip
-# binding.pry
-
-# NewsReaderCli::ApiKeyValidate.new.key_validate
-
-# binding.pry
-# Dotenv.load # defaul will looking for ('.env')
-NewsReaderCli::CLI.new.start
+cli = NewsReaderCli::CLI.new
+cli.start
