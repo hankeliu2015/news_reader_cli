@@ -31,6 +31,8 @@ After message "please type in API Key from API News:" paste your API key receive
 
 Follow screen instructions to access News articles. Type Exit to end the program.
 
+Video instruction: https://drive.google.com/file/d/1qyA3kmbthMng9TZVGut0yhw29GDfya_C/view?usp=sharing
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
